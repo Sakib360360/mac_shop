@@ -8,6 +8,70 @@ section{
     display: flex;
     
 }
-.image{
-    width: 100%;
+.image-section{
+    margin: 50px 10px 0px 100px;
+}
+.image {
+    width: 90%;
+    
+}
+.right-section {
+    margin: 29px 120px 10px 80px;
+    width: 80%;
+}
+.info h2 {
+    font-size: 31px;
+}
+.info p{
+
+}
+.memory h4 {
+    margin: 45px 0px 0px 0px;
+}
+.storage h4{
+    margin: 45px 0px 0px 0px;
+}
+.delivery h4{
+    margin: 45px 0px 0px 0px;
+}
+.common-flex p{
+
+}
+.common-flex button{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 7px;
+}
+.base {
+    border-bottom: 1px solid grey;
+    width: 250px;
+    justify-content: space-between;
+}
+.delivery {
+    margin-bottom: 30px;
+}
+.btn {
+    padding: 3px 8px;
+    background-color: #ff6868;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+.inp {
+    padding: 2px 15px;
+}
+hr {
+    margin: 5px 110px;
+}
+.total{
+    text-align: center;
+}
+.active{
+    background-color: rgb(176, 75, 75) !important;
+    color: white;
 }
