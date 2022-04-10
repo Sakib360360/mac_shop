@@ -32,6 +32,10 @@ m8gb.addEventListener('click',function(){
         memoryPrice.innerText = 0
     }
 
+    if(m16gb.classList.contains('active')){
+        m16gb.classList.remove('active')
+    }
+
 
     totalPrice.value = totalPriceAmount
     
@@ -53,6 +57,10 @@ m16gb.addEventListener('click',function(){
             memoryPrice.innerText = 0
         }
 
+        if(m8gb.classList.contains('active')){
+            m8gb.classList.remove('active')
+        }
+
         totalPrice.value = totalPriceAmount
     
 })
@@ -68,6 +76,12 @@ s256.addEventListener('click',function(){
         }
         else{
             sdPrice.innerText = 0
+        }
+
+        if(s512.classList.contains('active')){
+            s512.classList.remove('active')
+        }else if (s1tb.classList.contains('active')){
+            s1tb.classList.remove('active')
         }
 
         totalPrice.value = totalPriceAmount
@@ -87,6 +101,12 @@ s512.addEventListener('click',function(){
             sdPrice.innerText = 0
         }
 
+        if(s256.classList.contains('active')){
+            s256.classList.remove('active')
+        }else if (s1tb.classList.contains('active')){
+            s1tb.classList.remove('active')
+        }
+
         totalPrice.value = totalPriceAmount
     
 })
@@ -102,6 +122,12 @@ s1tb.addEventListener('click',function(){
         }
         else{
             sdPrice.innerText = 0
+        }
+
+        if(s512.classList.contains('active')){
+            s512.classList.remove('active')
+        }else if (s256.classList.contains('active')){
+            s256.classList.remove('active')
         }
 
         totalPrice.value = totalPriceAmount
@@ -121,6 +147,10 @@ d25.addEventListener('click',function(){
             sdPrice.innerText = 0
         }
 
+        if(d21.classList.contains('active')){
+            d21.classList.remove('active')
+        }
+
         totalPrice.value = totalPriceAmount
         
 })
@@ -135,6 +165,10 @@ d21.addEventListener('click',function(){
         }
         else{
             deliveryPriceField.innerText = 0
+        }
+
+        if(d25.classList.contains('active')){
+            d25.classList.remove('active')
         }
 
         totalPrice.value = totalPriceAmount
