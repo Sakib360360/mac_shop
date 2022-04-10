@@ -20,23 +20,23 @@
                 <div class="memory">
                     <h4>Memory</h4>
                         <div class="common-flex">
-                            <button class="" id="m8gb">8GB unified memory</button>    
-                            <button class="" id="m16gb">16gb unified memory</button> 
+                            <button class="btnc" id="m8gb">8GB unified memory</button>    
+                            <button class="btnc" id="m16gb">16gb unified memory</button> 
                         </div>
                 </div>
                 <div class="storage">
                     <h4>Storage</h4>
                     <div class="common-flex">
-                        <button id="s256">256GB SSD storage</button>
-                        <button id="s512">512GB SSD storage</button>
-                        <button id="s1tb">1TBB SSD storage</button>
+                        <button class="btnc" id="s256">256GB SSD storage</button>
+                        <button class="btnc" id="s512">512GB SSD storage</button>
+                        <button class="btnc" id="s1tb">1TBB SSD storage</button>
                     </div>
                 </div>
                 <div class="delivery">
                     <h4>Choose your delivery option</h4>
                     <div class="common-flex">
-                        <button id="d25">Friday, Aug 25 FREE Prime Delivery</button> 
-                        <button id="d21">Friday, Aug 21 Delivery carge $20</button> 
+                        <button class="btnc" id="d25">Friday, Aug 25 FREE Prime Delivery</button> 
+                        <button class="btnc" id="d21">Friday, Aug 21 Delivery carge $20</button> 
                     </div>
                 </div>
                 
@@ -46,23 +46,23 @@
                 </div>
                 <div class="common-flex base">
                     <h4>Extra Memory Cost</h4>
-                    <h4>$0</h4>
+                    <h4>$<span id="mPriceField">0</span></h4>
                 </div>
                 <div class="common-flex base">
                     <h4>Extra storage Cost</h4>
-                    <h4>$0</h4>
+                    <h4>$<span id="sPriceField">0</span></h4>
                 </div>
                 <div class="common-flex base" style="border-bottom: 2px solid;">
                     <h4>Delivery charge</h4>
-                    <h4>$0</h4>
+                    <h4>$<span id="deliveryPriceField">0</span></h4>
                 </div>
                 <div class="common-flex base" style="border: none;">
                     <h4>Total Price</h4>
-                    <h4>$1299</h4>
+                    <h4>$<span id="totalPrice">1299</span></h4>
                 </div>
                 <div class="promo">
                     <p>Add promo code</p>
-                    <input class="inp" type="text" name="" id="">
+                    <input class="inp" type="password" name="" id="">
                     <button class="btn" type="submit">Apply</button>
                 </div>
             </div>
@@ -70,7 +70,7 @@
     </section>
     <hr>
     <div class="total">
-        <h1>Total Price: $ <span>1299</span></h1>
+        <h1>Total Price: $<span id="subTotalPrice">1299</span></h1>
     </div>
 
 
