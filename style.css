@@ -60,7 +60,8 @@ section{
     cursor: pointer;
 }
 .inp {
-    padding: 2px 15px;
+    padding: 2px 15px 2px 2px;
+    font-size: 14px;
 }
 hr {
     margin: 5px 110px;

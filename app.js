@@ -10,6 +10,9 @@ const sdPrice = document.getElementById('sPriceField')
 const deliveryPriceField = document.getElementById('deliveryPriceField')
 const totalPrice = document.getElementById('totalPrice')
 const subTotalPrice = document.getElementById('subTotalPrice')
+const promoInput = document.getElementById('promoInput')
+const applyBtn = document.getElementById('applyBtn')
+
 
 
 
@@ -36,8 +39,11 @@ m8gb.addEventListener('click',function(){
         m16gb.classList.remove('active')
     }
 
+    addTotalPrice()
+    subTotal()
 
-    totalPrice.value = totalPriceAmount
+
+    // document.getElementById('totalPrice').innerText = totalPriceAmount
     
 })
 
@@ -61,8 +67,9 @@ m16gb.addEventListener('click',function(){
             m8gb.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
-    
+        
+        addTotalPrice()
+        subTotal()
 })
 
 
@@ -84,7 +91,8 @@ s256.addEventListener('click',function(){
             s1tb.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
+        addTotalPrice()
+        subTotal()
     
 })
 
@@ -107,7 +115,8 @@ s512.addEventListener('click',function(){
             s1tb.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
+        addTotalPrice()
+        subTotal()
     
 })
 
@@ -130,7 +139,8 @@ s1tb.addEventListener('click',function(){
             s256.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
+        addTotalPrice()
+        subTotal()
     
 })
 
@@ -151,7 +161,8 @@ d25.addEventListener('click',function(){
             d21.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
+        addTotalPrice()
+        subTotal()
         
 })
 
@@ -171,26 +182,55 @@ d21.addEventListener('click',function(){
             d25.classList.remove('active')
         }
 
-        totalPrice.value = totalPriceAmount
+        addTotalPrice()
+        subTotal()
     
 })
 
 
+
 // -------------------adding the price 
-const memoryCost = document.getElementById('mPriceField').innerText
-const memoryCostAmount = parseFloat(memoryCost)
+function addTotalPrice(){
+    const memoryCost = document.getElementById('mPriceField').innerText
+    const memoryCostAmount = parseInt(memoryCost)
 
-const storagePrice = document.getElementById('sPriceField').innerText
-const storagePriceaAmount = parseFloat(storagePrice)
+    const storagePrice = document.getElementById('sPriceField').innerText
+    const storagePriceAmount = parseInt(storagePrice)
 
-const deliveryPrice = document.getElementById('deliveryPriceField').innerText
-const deliveryPriceAmount = parseFloat(deliveryPrice)
+    const deliveryPrice = document.getElementById('deliveryPriceField').innerText
+    const deliveryPriceAmount = parseInt(deliveryPrice)
 
-const totalPriceAmount = memoryCostAmount + storagePriceaAmount + deliveryPriceAmount
+    const totalPriceAmount = 1299 + memoryCostAmount + storagePriceAmount + deliveryPriceAmount
+
+    document.getElementById('totalPrice').innerText = totalPriceAmount
+}
+
+// -------------------adding the Sub total price 
+
+function subTotal(){
+    const totalPrice = document.getElementById('totalPrice').innerText
+    
+    if(document.getElementById('promoInput').value == 'saad'){
+     subTotalPrice.innerText = totalPrice * .1   
+    }else if(document.getElementById('promoInput').value != 'saad'){
+        alert('Promo code is not currect. Please enter the correct promo code to get 10 % off the total price.')
+    }
+    
+    else{
+        subTotalPrice.innerText = totalPrice
+    }
+}
 
 
+// promo code
+const getPromoValue = document.getElementById('promoInput').value
 
 
+// apply the promo code
+document.getElementById('promoInput').value
+applyBtn.addEventListener('click',function(){
+    subTotal()
+})
 
 
 
