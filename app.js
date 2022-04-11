@@ -16,10 +16,6 @@ const applyBtn = document.getElementById('applyBtn')
 
 
 
-
-
-
-
 m8gb.addEventListener('click',function(){
     // toggle-----------
     
@@ -212,7 +208,10 @@ function subTotal(){
     
     if(document.getElementById('promoInput').value == 'saad'){
      subTotalPrice.innerText = totalPrice * .1   
-    }else if(document.getElementById('promoInput').value != 'saad'){
+    }else if(document.getElementById('promoInput').value == ''){
+        subTotalPrice.innerText = totalPrice
+    }
+    else if(document.getElementById('promoInput').value != 'saad'){
         alert('Promo code is not currect. Please enter the correct promo code to get 10 % off the total price.')
     }
     
@@ -223,7 +222,7 @@ function subTotal(){
 
 
 // promo code
-const getPromoValue = document.getElementById('promoInput').value
+// const getPromoValue = document.getElementById('promoInput').value
 
 
 // apply the promo code
