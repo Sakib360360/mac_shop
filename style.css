@@ -1,6 +1,8 @@
 body{
     margin: 0;
-    
+    font-size: 20px;
+    background-color: rgb(13, 24, 34);
+    color: #FFFFFFFF;
 }
 section{
     display: flex;
@@ -18,7 +20,7 @@ section{
 }
 .right-section {
     margin: 29px 120px 10px 80px;
-    width: 80%;
+    width: 60%;
 }
 .info h2 {
     font-size: 31px;
@@ -34,14 +36,16 @@ section{
     margin: 45px 0px 0px 0px;
 }
 
-.common-flex button{
-    background-color: white;
+.common-flex button {
+    background-color: #ffffff00;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     margin-right: 8px;
     margin-top: 7px;
+    padding: 9px 45px;
+    color: azure;
 }
 .base {
     border-bottom: 1px solid grey;
@@ -52,10 +56,10 @@ section{
     margin-bottom: 30px;
 }
 .btn {
-    padding: 3px 8px;
-    background-color: #ff6868;
+    padding: 4px 30px;
+    background-color: #ff686800;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
     color: white;
     cursor: pointer;
 }
@@ -70,12 +74,12 @@ hr {
     text-align: center;
 }
 .active{
-    background-color: rgb(176, 75, 75) !important;
+    background-color: rgb(105, 105, 105) !important;
     color: white;
 }
 .btnc:hover{
     /* background-color: aqua; */
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 

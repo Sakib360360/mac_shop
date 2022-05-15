@@ -14,7 +14,23 @@ const promoInput = document.getElementById('promoInput')
 const applyBtn = document.getElementById('applyBtn')
 
 
-
+function productPrice(product,price){
+    if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        } else product.classList.add("active");
+        
+    
+        if (product.classList.contains('active')){
+            price.innerText = 199
+        }
+        else{
+            price.innerText = 0
+        }
+    
+        if(product.classList.contains('active')){
+            product.classList.remove('active')
+        }
+}
 
 m8gb.addEventListener('click',function(){
     // toggle-----------
@@ -34,7 +50,7 @@ m8gb.addEventListener('click',function(){
     if(m16gb.classList.contains('active')){
         m16gb.classList.remove('active')
     }
-
+   
     addTotalPrice()
     subTotal()
 
@@ -207,7 +223,7 @@ function subTotal(){
     const totalPrice = document.getElementById('totalPrice').innerText
     
     if(document.getElementById('promoInput').value == 'saad'){
-     subTotalPrice.innerText = totalPrice * .1   
+     subTotalPrice.innerText = totalPrice - (totalPrice * .1)   
     }else if(document.getElementById('promoInput').value == ''){
         subTotalPrice.innerText = totalPrice
     }
